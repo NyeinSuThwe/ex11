@@ -37,3 +37,10 @@ body { margin: 0; }
   line-height: 1.75;
   letter-spacing: .1px;
   --gutter: 20px;
+
+  /* Center blocks and add breathing room */
+header, main, footer{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
