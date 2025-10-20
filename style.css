@@ -99,3 +99,16 @@ header::after{
       transparent 70%);
   border-radius: 2px;
 }
+    main{ padding: 24px var(--gutter) 64px; }
+article{ margin-top: 8px; }
+
+/* Drop cap on the first paragraph of the story only */
+article p:first-of-type::first-letter{
+  float: left;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3.3rem;
+  line-height: .9;
+  margin-right: .35rem;
+  color: var(--accent);
+}
+
