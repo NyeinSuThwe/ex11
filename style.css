@@ -1,3 +1,17 @@
+
+*,*::before,*::after { box-sizing: border-box; }
+html,body { height: 100%; }
+body { margin: 0; }
+
+/* ========= Design tokens (Jupiter & the Monkey) ========= */
+:root{
+  /* Palette */
+  --paper: #FAF7F2;   /* warm cream */
+  --ink:   #1F1F23;   /* dark text */
+  --accent:#7A2E1C;   /* oxblood for titles */
+  --gold:  #D9B873;   /* prize ribbon gold */
+  --muted: #6D6A6A;   /* secondary text */
+  --rule:  #E6DED2;   /* light rule */
 *{
   margin: 0;
   padding: 0;
