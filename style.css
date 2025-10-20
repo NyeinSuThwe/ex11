@@ -43,4 +43,14 @@ header, main, footer{
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--gutter);
+}h1, h2{
+  margin: 0;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
+h1{
+  color: var(--accent);
+  font-size: var(--step-3);
+  line-height: 1.05;
+  letter-spacing: .2px;
+  padding-top: 28px;
+  text-wrap: balance;
