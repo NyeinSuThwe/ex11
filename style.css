@@ -112,3 +112,20 @@ article p:first-of-type::first-letter{
   color: var(--accent);
 }
 
+@media (min-width: 980px){
+  /* future-proof: easy to add a right panel later without HTML changes */
+  main{
+    display: grid;
+    grid-template-columns: minmax(0, var(--maxw));
+    justify-content: start;
+    column-gap: clamp(24px, 4vw, 40px);
+  }
+}
+
+footer{
+  color: var(--muted);
+  font-size: var(--step--1);
+  padding: 24px 0 28px;
+}
+footer a{ color: inherit; }
+footer a:hover{ text-decoration: underline; }
