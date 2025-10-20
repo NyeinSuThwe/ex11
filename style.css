@@ -80,3 +80,22 @@ p + p{
 /* Gentle emphasis */
 em{ font-style: italic; }
 strong{ font-weight: 700; }
+
+  (under the header) ========= */
+header{
+  padding-bottom: 10px;
+  position: relative;
+}
+header::after{
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 12px auto 0;
+  max-width: 560px;
+  background:
+    linear-gradient(90deg,
+      var(--accent) 0%,
+      color-mix(in oklab, var(--accent), transparent 30%) 40%,
+      transparent 70%);
+  border-radius: 2px;
+}
