@@ -54,3 +54,29 @@ h1{
   letter-spacing: .2px;
   padding-top: 28px;
   text-wrap: balance;
+
+  }
+h2{
+  color: var(--muted);
+  font-size: var(--step-4);
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/* Lede and paragraphs */
+.lede{
+  color: #3a332e;
+  font-size: var(--step-1);
+  margin: 18px 0 10px;
+}
+p{
+  margin: 0;
+  max-width: var(--maxw);
+}
+p + p{
+  margin-top: 1.15em;
+}
+
+/* Gentle emphasis */
+em{ font-style: italic; }
+strong{ font-weight: 700; }
