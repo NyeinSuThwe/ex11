@@ -116,7 +116,6 @@ article p:first-of-type::first-letter{
 
 /* ===== Responsive polish ===== */
 @media (min-width: 980px){
-  /* future-proof: easy to add a right panel later without HTML changes */
   main{
     display: grid;
     grid-template-columns: minmax(0, var(--maxw));
