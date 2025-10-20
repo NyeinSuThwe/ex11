@@ -1,9 +1,9 @@
-
-*,*::before,*::after { box-sizing: border-box; }
-html,body { height: 100%; }
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
 body { margin: 0; }
 
-/* ========= Design tokens (Jupiter & the Monkey) ========= */
+/* ===== Design tokens (Jupiter & the Monkey) ===== */
 :root{
   /* Palette */
   --paper: #FAF7F2;   /* warm cream */
@@ -12,11 +12,6 @@ body { margin: 0; }
   --gold:  #D9B873;   /* prize ribbon gold */
   --muted: #6D6A6A;   /* secondary text */
   --rule:  #E6DED2;   /* light rule */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
   /* Type scale */
   --step--1: 0.9rem;
@@ -27,23 +22,29 @@ body { margin: 0; }
   --step-4:  clamp(1.1rem, 2.2vw, 1.25rem);/* h2 */
 
   /* Layout */
-  --maxw: 70ch;       /* reading width *//
+  --maxw: 70ch;       /* reading width */
+  --gutter: 20px;     /* page padding */
+}
 
-  body{
+/* ===== Base ===== */
+body{
   background: var(--paper);
   color: var(--ink);
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: var(--step-0);
   line-height: 1.75;
   letter-spacing: .1px;
-  --gutter: 20px;
+}
 
-  /* Center blocks and add breathing room */
+/* Center blocks and add breathing room */
 header, main, footer{
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--gutter);
-}h1, h2{
+}
+
+/* ===== Typography hierarchy ===== */
+h1, h2{
   margin: 0;
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
@@ -54,8 +55,7 @@ h1{
   letter-spacing: .2px;
   padding-top: 28px;
   text-wrap: balance;
-
-  }
+}
 h2{
   color: var(--muted);
   font-size: var(--step-4);
@@ -81,7 +81,7 @@ p + p{
 em{ font-style: italic; }
 strong{ font-weight: 700; }
 
-  (under the header) ========= */
+/* ===== Prize-ribbon divider under header ===== */
 header{
   padding-bottom: 10px;
   position: relative;
@@ -99,7 +99,9 @@ header::after{
       transparent 70%);
   border-radius: 2px;
 }
-    main{ padding: 24px var(--gutter) 64px; }
+
+/* ===== Story layout & drop cap ===== */
+main{ padding: 24px var(--gutter) 64px; }
 article{ margin-top: 8px; }
 
 /* Drop cap on the first paragraph of the story only */
@@ -112,6 +114,7 @@ article p:first-of-type::first-letter{
   color: var(--accent);
 }
 
+/* ===== Responsive polish ===== */
 @media (min-width: 980px){
   /* future-proof: easy to add a right panel later without HTML changes */
   main{
@@ -122,6 +125,7 @@ article p:first-of-type::first-letter{
   }
 }
 
+/* ===== Footer ===== */
 footer{
   color: var(--muted);
   font-size: var(--step--1);
